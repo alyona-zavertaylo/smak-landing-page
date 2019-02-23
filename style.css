@@ -1,0 +1,430 @@
+body {
+  padding: 0;
+  margin: 0 auto; }
+  body .wrapper {
+    max-width: 1170px;
+    margin: 0 auto; }
+  body p {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    margin: 25px 0; }
+  body h2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase; }
+  body h3 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase; }
+
+header {
+  background-color: #b8b8b9;
+  opacity: 0.95;
+  width: 100%;
+  z-index: 100;
+  position: fixed; }
+  header:before, header:after {
+    content: "";
+    display: table; }
+  header:after {
+    clear: both; }
+  header .head-fix {
+    height: 100px;
+    position: relative; }
+    header .head-fix .logo {
+      float: left;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); }
+    header .head-fix nav {
+      float: right;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%); }
+      header .head-fix nav:before, header .head-fix nav:after {
+        content: "";
+        display: table; }
+      header .head-fix nav:after {
+        clear: both; }
+      header .head-fix nav ul {
+        float: right; }
+        header .head-fix nav ul li {
+          cursor: pointer;
+          float: left;
+          padding: 0 10px;
+          margin: 0 12px;
+          list-style-type: square;
+          color: #ffe600;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+          font-family: "Oswald", sans-serif; }
+          header .head-fix nav ul li a {
+            color: #fff; }
+          header .head-fix nav ul li a:hover {
+            color: #ffe600; }
+          header .head-fix nav ul li a.active {
+            color: #ffe600; }
+        header .head-fix nav ul li:first-child {
+          list-style-type: none; }
+
+.slider {
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .slider:before, .slider:after {
+    content: "";
+    display: table; }
+  .slider:after {
+    clear: both; }
+  .slider .slider-model {
+    width: 100%;
+    height: 100%; }
+    .slider .slider-model ul {
+      margin: 0;
+      padding: 0;
+      width: 500%;
+      height: 100%;
+      float: left; }
+      .slider .slider-model ul li {
+        float: left;
+        list-style-type: none;
+        width: 20%;
+        height: 100%;
+        background-image: url("img/slider1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; }
+  .slider .panel-slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 34%;
+    background-color: rgba(184, 184, 185, 0.7);
+    width: 100%; }
+    .slider .panel-slider-controls:before, .slider .panel-slider-controls:after {
+      content: "";
+      display: table; }
+    .slider .panel-slider-controls:after {
+      clear: both; }
+    .slider .panel-slider-controls .wrapper {
+      height: 100%; }
+      .slider .panel-slider-controls .wrapper .slider-controls {
+        height: 100%;
+        position: relative; }
+        .slider .panel-slider-controls .wrapper .slider-controls:before, .slider .panel-slider-controls .wrapper .slider-controls:after {
+          content: "";
+          display: table; }
+        .slider .panel-slider-controls .wrapper .slider-controls:after {
+          clear: both; }
+        .slider .panel-slider-controls .wrapper .slider-controls .left {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          padding: 60px;
+          color: #fff;
+          font-size: 25px; }
+        .slider .panel-slider-controls .wrapper .slider-controls .right {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
+          padding: 60px;
+          color: #fff;
+          font-size: 25px; }
+      .slider .panel-slider-controls .wrapper button {
+        outline: none;
+        background: #ffe600;
+        text-transform: uppercase;
+        border: 0;
+        height: 60px;
+        width: 233px;
+        position: absolute;
+        left: 50%;
+        top: 67.5%;
+        transform: translate(-50%, 0);
+        opacity: 2;
+        color: #131316;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif; }
+      .slider .panel-slider-controls .wrapper button:hover {
+        background: #fff;
+        color: #ffe600;
+        transition: 0.3s; }
+      .slider .panel-slider-controls .wrapper .slider-text {
+        color: #fff;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, 0); }
+        .slider .panel-slider-controls .wrapper .slider-text ul {
+          list-style-type: none;
+          text-align: center;
+          width: 500%;
+          overflow: hidden;
+          padding: 0; }
+          .slider .panel-slider-controls .wrapper .slider-text ul li {
+            font-size: 65px;
+            font-weight: 700;
+            font-family: "Oswald", sans-serif;
+            width: 20%;
+            float: left; }
+
+.services {
+  padding: 45px 0;
+  text-align: center; }
+  .services .line {
+    width: 170px;
+    height: 3px;
+    background: #ffe600;
+    display: inline-block; }
+  .services .service {
+    text-align: center;
+    padding-top: 45px; }
+    .services .service .circe-icon {
+      width: 106px;
+      height: 106px;
+      background: #ffe600;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative; }
+      .services .service .circe-icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s; }
+      .services .service .circe-icon img:hover {
+        top: 32%;
+        left: 31%;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
+
+.services2 {
+  padding: 45px 0;
+  background: #131a1d;
+  text-align: center; }
+  .services2 h2 {
+    color: #ffe600; }
+  .services2 h3 {
+    color: #fff; }
+  .services2 p {
+    color: #fff; }
+  .services2 .circe-icon {
+    padding-top: 45px; }
+    .services2 .circe-icon img:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: 0.3s; }
+
+.portfolio {
+  padding: 45px 0;
+  text-align: center; }
+  .portfolio .wrapper {
+    max-width: 1170px;
+    margin: 0 auto; }
+    .portfolio .wrapper .line {
+      width: 170px;
+      height: 3px;
+      background: #ffe600;
+      display: inline-block; }
+    .portfolio .wrapper .navigation {
+      text-align: center;
+      padding: 40px 0 60px 0; }
+      .portfolio .wrapper .navigation:before, .portfolio .wrapper .navigation:after {
+        content: "";
+        display: table; }
+      .portfolio .wrapper .navigation:after {
+        clear: both; }
+      .portfolio .wrapper .navigation ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block; }
+        .portfolio .wrapper .navigation ul li {
+          cursor: pointer;
+          float: left;
+          padding: 0 10px;
+          margin: 0 12px;
+          list-style-type: square;
+          color: #ffe600;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+          font-family: "Oswald", sans-serif; }
+          .portfolio .wrapper .navigation ul li a {
+            color: #515151; }
+          .portfolio .wrapper .navigation ul li a:hover {
+            color: #ffe600; }
+        .portfolio .wrapper .navigation ul li:first-child {
+          list-style-type: none; }
+    .portfolio .wrapper .like-portfolio {
+      padding: 45px 0 73px 0; }
+      .portfolio .wrapper .like-portfolio button {
+        background: #ffe600;
+        border: 0;
+        color: #fff;
+        outline: none; }
+      .portfolio .wrapper .like-portfolio .down {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        margin-bottom: 45px; }
+      .portfolio .wrapper .like-portfolio .contact {
+        width: 170px;
+        height: 60px;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        margin-top: 45px; }
+  .portfolio .proud-number {
+    background-color: #131a1d;
+    padding: 40px 0; }
+    .portfolio .proud-number .wrapper {
+      max-width: 1170px;
+      margin: 0 auto;
+      text-align: center; }
+      .portfolio .proud-number .wrapper h2 {
+        color: #fff; }
+      .portfolio .proud-number .wrapper p {
+        color: #fff; }
+      .portfolio .proud-number .wrapper .numbers {
+        border: 1px solid #ffe600;
+        padding: 20px 0;
+        margin: 40px 0 25px 0; }
+        .portfolio .proud-number .wrapper .numbers h2 {
+          color: #fff;
+          margin: 15px 0; }
+        .portfolio .proud-number .wrapper .numbers h3 {
+          color: #ffe600; }
+  .portfolio .works {
+    width: 100%;
+    height: 500px;
+    display: inline-block; }
+    .portfolio .works .work {
+      width: 16.66%;
+      float: left;
+      height: 50%;
+      position: relative; }
+      .portfolio .works .work .img1 {
+        width: 100%;
+        height: 100%;
+        background-image: url("img/work1.jpg");
+        background-size: cover; }
+      .portfolio .works .work .img2 {
+        width: 100%;
+        height: 100%;
+        background-image: url("img/work2.jpg");
+        background-size: cover; }
+      .portfolio .works .work .img-hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background: rgba(255, 230, 0, 0.4);
+        width: 100%;
+        height: 100%; }
+        .portfolio .works .work .img-hover .title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+          .portfolio .works .work .img-hover .title h4 {
+            font-size: 25px;
+            font-weight: 700;
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            margin: 10px;
+            white-space: nowrap; }
+          .portfolio .works .work .img-hover .title p {
+            margin: 5px; }
+    .portfolio .works .work:hover .img-hover {
+      display: block;
+      transition: 0.5s; }
+
+.about {
+  margin: 45px 0 60px 0;
+  text-align: center; }
+  .about .line {
+    width: 170px;
+    height: 3px;
+    background: #ffe600;
+    display: inline-block; }
+  .about .service {
+    text-align: left; }
+    .about .service .service-part {
+      margin-top: 45px; }
+      .about .service .service-part .circle {
+        background: #ffe600;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 16px;
+        position: relative; }
+        .about .service .service-part .circle img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+        .about .service .service-part .circle img:hover {
+          top: 27.5%;
+          left: 27.5%;
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 0.3s; }
+      .about .service .service-part p {
+        margin: 0; }
+
+.skills {
+  background: #131a1d;
+  text-align: center;
+  color: #fff;
+  padding: 40px 0;
+  position: relative; }
+  .skills .container {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+    position: relative; }
+    .skills .container .box {
+      width: 100%;
+      position: relative; }
+      .skills .container .box h2 {
+        color: #ffe600;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 25px; }
+      .skills .container .box .chart {
+        width: 145px;
+        height: 145px;
+        text-align: center;
+        font-size: 35px;
+        font-family: "Oswald", sans-serif;
+        line-height: 145px;
+        color: #ffe600;
+        margin: auto; }
+      .skills .container .box canvas {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0); }
+
+.clients {
+  padding: 45px 0;
+  text-align: center; }
+  .clients .line {
+    width: 170px;
+    height: 3px;
+    background: #ffe600;
+    display: inline-block; }
