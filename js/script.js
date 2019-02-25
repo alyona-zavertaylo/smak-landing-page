@@ -4,9 +4,9 @@ window.onload = function() {
    Scrollit.js
     ========================================
   */
-  //  $(function() {
-  //   $.scrollIt();
-  // });
+   $(function() {
+    $.scrollIt();
+  });
 
   // Slider
 
@@ -20,7 +20,6 @@ window.onload = function() {
 
   $(function() {
     $('.chart').easyPieChart({
-      siza: 180,
       barColor: '#ffe600',
       scaleColor: false,
       lineWidth: 6,
