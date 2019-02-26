@@ -499,7 +499,9 @@ footer {
     height: 60px;
     width: 60px;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    outline: none;
+    cursor: pointer; }
     footer .top i {
       color: #fff;
       font-size: 25px; }
