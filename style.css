@@ -464,7 +464,7 @@ header {
       border: 1px solid #fff;
       font-family: "Oswald", sans-serif;
       font-size: 15px; }
-    .contact .message input[type=button] {
+    .contact .message input[type="button"] {
       background: #ffcf00;
       color: #161f32;
       margin: 15px 0;
@@ -475,6 +475,35 @@ header {
       font-weight: 700;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase; }
-    .contact .message input[type=button]:hover {
+    .contact .message input[type="button"]:hover {
       background: #fff;
       color: #ffcf00; }
+
+footer {
+  text-align: center;
+  background: #131316; }
+  footer p {
+    color: #fff; }
+    footer p span {
+      color: #ffe600; }
+  footer .social-network {
+    margin-bottom: 34px; }
+    footer .social-network i {
+      color: #fff;
+      margin: 0 10px; }
+    footer .social-network i:hover {
+      color: #ffe600; }
+  footer .top {
+    border: 0;
+    background: #ffe600;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0; }
+    footer .top i {
+      color: #fff;
+      font-size: 25px; }
+  footer .top:hover {
+    background: #fff; }
+    footer .top:hover i {
+      color: #ffe600; }

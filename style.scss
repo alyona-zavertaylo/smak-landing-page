@@ -552,7 +552,7 @@ header {
       font-family: "Oswald", sans-serif;
       font-size: 15px;
     }
-    input[type=button] {
+    input[type="button"] {
       background: #ffcf00;
       color: #161f32;
       margin: 15px 0;
@@ -564,9 +564,49 @@ header {
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
     }
-    input[type=button]:hover {
+    input[type="button"]:hover {
       background: #fff;
       color: #ffcf00;
     }
+  }
+}
+footer {
+  text-align: center;
+  background: #131316;
+  p {
+    color: #fff;
+    span {
+      color: #ffe600;
+    }
+  }
+  .social-network {
+    margin-bottom: 34px;
+    i {
+      color: #fff;
+      margin: 0 10px;
+    }
+    i:hover {
+      color: #ffe600;
+    }
+  }
+
+  .top {
+    border: 0;
+    background: #ffe600;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    i {
+      color: #fff;
+      font-size: 25px;
+    }
+  }
+  .top:hover {
+    background: #fff;
+    i {
+      color: #ffe600;
+    }
+    
   }
 }
