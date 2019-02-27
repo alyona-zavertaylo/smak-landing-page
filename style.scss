@@ -10,6 +10,7 @@ body {
     font-weight: 300;
     font-family: "Oswald", sans-serif;
     margin: 25px 0;
+    color: #797979;
   }
   h2 {
     font-size: 30px;
@@ -418,7 +419,7 @@ header {
 }
 
 .about {
-  margin: 45px 0 60px 0;
+  margin-top: 45px;
   text-align: center;
   .line {
     width: 170px;
@@ -456,6 +457,35 @@ header {
       }
       p {
         margin: 0;
+      }
+    }
+  }
+  .team {
+    margin-top: 60px;
+    padding: 40px 0 65px 0;
+    background: #fbfbfb;
+    .img {
+      width: 100%;
+      height: 250px;
+      background-image: url('img/team.jpg');
+      background-size: cover;
+    }
+    .title {
+      background: #fff;
+      border-bottom: 1px solid #e1e6e6;
+      height: 80px;
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+        padding-top: 8px;
+        color: #ffe600;
+      }
+      p {
+        margin: 5px 0;
+        color: #797979;
       }
     }
   }
@@ -529,11 +559,17 @@ header {
     p {
       font-size: 20px;
     }
+    img:hover {
+      transform: scale(1.1);
+    }
   }
   .message {
     padding: 45px;
     background: #131a1d;
     color: #fff;
+    p {
+      color: #fff;
+    }
     input {
       width: 100%;
       height: 60px;
@@ -541,6 +577,7 @@ header {
       padding: 20px;
       margin: 15px 0;
       border: 1px solid #fff;
+      color: #fff;
     }
     textarea {
       background: transparent;
@@ -551,6 +588,7 @@ header {
       border: 1px solid #fff;
       font-family: "Oswald", sans-serif;
       font-size: 15px;
+      color: #fff;
     }
     input[type="button"] {
       background: #ffcf00;
@@ -609,6 +647,5 @@ footer {
     i {
       color: #ffe600;
     }
-    
   }
 }
