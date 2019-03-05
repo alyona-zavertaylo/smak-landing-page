@@ -3,7 +3,8 @@ body {
   margin: 0 auto; }
   body .wrapper {
     max-width: 1170px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
   body p {
     font-size: 16px;
     font-weight: 300;
@@ -171,11 +172,23 @@ header {
           overflow: hidden;
           padding: 0; }
           .slider .panel-slider-controls .wrapper .slider-text ul li {
-            font-size: 65px;
+            font-size: 25px;
             font-weight: 700;
             font-family: "Oswald", sans-serif;
             width: 20%;
             float: left; }
+            @media (min-width: 768px) {
+              .slider .panel-slider-controls .wrapper .slider-text ul li {
+                font-size: 35px; } }
+            @media (min-width: 992px) {
+              .slider .panel-slider-controls .wrapper .slider-text ul li {
+                font-size: 45px; } }
+            @media (min-width: 992px) {
+              .slider .panel-slider-controls .wrapper .slider-text ul li {
+                font-size: 55px; } }
+            @media (min-width: 1440px) {
+              .slider .panel-slider-controls .wrapper .slider-text ul li {
+                font-size: 65px; } }
 
 .services {
   padding: 45px 0;

@@ -4,6 +4,7 @@ body {
   .wrapper {
     max-width: 1170px;
     margin: 0 auto;
+    width: 100%;
   }
   p {
     font-size: 16px;
@@ -34,6 +35,36 @@ body {
   }
   &:after {
     clear: both;
+  }
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $class == xxl {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
 
@@ -187,11 +218,23 @@ header {
           overflow: hidden;
           padding: 0;
           li {
-            font-size: 65px;
+            font-size: 25px;
             font-weight: 700;
             font-family: "Oswald", sans-serif;
             width: 20%;
             float: left;
+            @include breakpoint(md) {
+              font-size: 35px;
+            }
+            @include breakpoint(lg) {
+              font-size: 45px;
+            }
+            @include breakpoint(lg) {
+              font-size: 55px;
+            }
+            @include breakpoint(xxl) {
+              font-size: 65px;
+            }
           }
         }
       }
