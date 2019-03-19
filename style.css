@@ -11,6 +11,22 @@ body {
     font-family: "Oswald", sans-serif;
     margin: 25px 0;
     color: #797979; }
+  body h1 {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif; }
+    @media (min-width: 768px) {
+      body h1 {
+        font-size: 35px; } }
+    @media (min-width: 992px) {
+      body h1 {
+        font-size: 45px; } }
+    @media (min-width: 992px) {
+      body h1 {
+        font-size: 55px; } }
+    @media (min-width: 1440px) {
+      body h1 {
+        font-size: 65px; } }
   body h2 {
     font-size: 30px;
     font-weight: 700;
@@ -91,28 +107,46 @@ header {
       padding: 0;
       width: 500%;
       height: 100%;
-      float: left; }
+      position: relative; }
       .slider .slider-model ul li {
         float: left;
         list-style-type: none;
         width: 20%;
         height: 100%;
-        background-image: url("img/slider1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat; }
+        transition: 0.3s;
+        position: relative; }
+        .slider .slider-model ul li .panel-slider {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          padding: 0 100px 30px 100px;
+          background-color: rgba(184, 184, 185, 0.7);
+          text-align: center;
+          width: 100%; }
+          .slider .slider-model ul li .panel-slider button {
+            outline: none;
+            background: #ffe600;
+            text-transform: uppercase;
+            border: 0;
+            height: 60px;
+            width: 233px;
+            opacity: 2;
+            color: #131316;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Oswald", sans-serif; }
+          .slider .slider-model ul li .panel-slider button:hover {
+            background: #fff;
+            color: #ffe600;
+            transition: 0.3s; }
   .slider .panel-slider-controls {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
-    height: 34%;
-    background-color: rgba(184, 184, 185, 0.7);
-    width: 100%; }
-    .slider .panel-slider-controls:before, .slider .panel-slider-controls:after {
-      content: "";
-      display: table; }
-    .slider .panel-slider-controls:after {
-      clear: both; }
+    width: 100%;
+    height: 100%; }
     .slider .panel-slider-controls .wrapper {
       height: 100%; }
       .slider .panel-slider-controls .wrapper .slider-controls {
@@ -130,7 +164,8 @@ header {
           transform: translate(0, -50%);
           padding: 60px;
           color: #fff;
-          font-size: 25px; }
+          font-size: 25px;
+          z-index: 10; }
         .slider .panel-slider-controls .wrapper .slider-controls .right {
           position: absolute;
           top: 50%;
@@ -138,57 +173,8 @@ header {
           transform: translate(0, -50%);
           padding: 60px;
           color: #fff;
-          font-size: 25px; }
-      .slider .panel-slider-controls .wrapper button {
-        outline: none;
-        background: #ffe600;
-        text-transform: uppercase;
-        border: 0;
-        height: 60px;
-        width: 233px;
-        position: absolute;
-        left: 50%;
-        top: 67.5%;
-        transform: translate(-50%, 0);
-        opacity: 2;
-        color: #131316;
-        font-size: 20px;
-        font-weight: 700;
-        font-family: "Oswald", sans-serif; }
-      .slider .panel-slider-controls .wrapper button:hover {
-        background: #fff;
-        color: #ffe600;
-        transition: 0.3s; }
-      .slider .panel-slider-controls .wrapper .slider-text {
-        color: #fff;
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, 0); }
-        .slider .panel-slider-controls .wrapper .slider-text ul {
-          list-style-type: none;
-          text-align: center;
-          width: 500%;
-          overflow: hidden;
-          padding: 0; }
-          .slider .panel-slider-controls .wrapper .slider-text ul li {
-            font-size: 25px;
-            font-weight: 700;
-            font-family: "Oswald", sans-serif;
-            width: 20%;
-            float: left; }
-            @media (min-width: 768px) {
-              .slider .panel-slider-controls .wrapper .slider-text ul li {
-                font-size: 35px; } }
-            @media (min-width: 992px) {
-              .slider .panel-slider-controls .wrapper .slider-text ul li {
-                font-size: 45px; } }
-            @media (min-width: 992px) {
-              .slider .panel-slider-controls .wrapper .slider-text ul li {
-                font-size: 55px; } }
-            @media (min-width: 1440px) {
-              .slider .panel-slider-controls .wrapper .slider-text ul li {
-                font-size: 65px; } }
+          font-size: 25px;
+          z-index: 10; }
 
 .services {
   padding: 45px 0;
