@@ -120,10 +120,23 @@ header {
           top: 50%;
           left: 0;
           transform: translate(0, -50%);
-          padding: 0 100px 30px 100px;
+          padding: 0 40px 30px 40px;
           background-color: rgba(184, 184, 185, 0.7);
           text-align: center;
-          width: 100%; }
+          width: 100%;
+          color: #fff; }
+          @media (min-width: 768px) {
+            .slider .slider-model ul li .panel-slider {
+              padding: 0 60px 30px 60px; } }
+          @media (min-width: 992px) {
+            .slider .slider-model ul li .panel-slider {
+              padding: 0 100px 30px 100px; } }
+          @media (min-width: 992px) {
+            .slider .slider-model ul li .panel-slider {
+              padding: 0 200px 30px 200px; } }
+          @media (min-width: 1440px) {
+            .slider .slider-model ul li .panel-slider {
+              padding: 0 270px 30px 270px; } }
           .slider .slider-model ul li .panel-slider button {
             outline: none;
             background: #ffe600;
@@ -162,19 +175,31 @@ header {
           top: 50%;
           left: 0;
           transform: translate(0, -50%);
-          padding: 60px;
+          padding: 15px;
           color: #fff;
           font-size: 25px;
           z-index: 10; }
+          @media (min-width: 768px) {
+            .slider .panel-slider-controls .wrapper .slider-controls .left {
+              padding: 50px 0px 50px 50px; } }
+          @media (min-width: 992px) {
+            .slider .panel-slider-controls .wrapper .slider-controls .left {
+              padding: 100px 0px 100px 100px; } }
         .slider .panel-slider-controls .wrapper .slider-controls .right {
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(0, -50%);
-          padding: 60px;
+          padding: 15px;
           color: #fff;
           font-size: 25px;
           z-index: 10; }
+          @media (min-width: 768px) {
+            .slider .panel-slider-controls .wrapper .slider-controls .right {
+              padding: 50px 50px 50px 0px; } }
+          @media (min-width: 992px) {
+            .slider .panel-slider-controls .wrapper .slider-controls .right {
+              padding: 60px; } }
 
 .services {
   padding: 45px 0;
