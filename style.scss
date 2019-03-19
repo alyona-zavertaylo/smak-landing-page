@@ -172,10 +172,23 @@ header {
           top: 50%;
           left: 0;
           transform: translate(0, -50%);
-          padding: 0 100px 30px 100px;
+          padding: 0 40px 30px 40px;
           background-color: rgba(184, 184, 185, 0.7);
           text-align: center;
           width: 100%;
+          color: #fff;
+          @include breakpoint(md) {
+            padding: 0 60px 30px 60px;
+          }
+          @include breakpoint(lg) {
+            padding: 0 100px 30px 100px;
+          }
+          @include breakpoint(lg) {
+            padding: 0 200px 30px 200px;
+          }
+          @include breakpoint(xxl) {
+            padding: 0 270px 30px 270px;
+          }
           button {
             outline: none;
             background: #ffe600;
@@ -216,20 +229,32 @@ header {
           top: 50%;
           left: 0;
           transform: translate(0, -50%);
-          padding: 60px;
+          padding: 15px;
           color: #fff;
           font-size: 25px;
           z-index: 10;
+          @include breakpoint(md) {
+            padding: 50px 0px 50px 50px;
+          }
+          @include breakpoint(lg) {
+            padding: 100px 0px 100px 100px;
+          }
         }
         .right {
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(0, -50%);
-          padding: 60px;
+          padding: 15px;
           color: #fff;
           font-size: 25px;
           z-index: 10;
+          @include breakpoint(md) {
+            padding: 50px 50px 50px 0px;
+          }
+          @include breakpoint(lg) {
+            padding: 60px;
+          }
         }
       }
       
