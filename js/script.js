@@ -32,31 +32,43 @@ window.onload = function() {
   initializeMainSlider(".slider");
   // slider - blok "Quote"
   initializeSlider(".quote .slider-model");
+
+  // filter 
+
+  // slider - block "Client"
+
 };
 
-initializeMainSlider = (sliderSelector) => {
-  const rightSliderButton = document.querySelector(sliderSelector + "> .panel-slider-controls .right");
-  const leftSliderButton = document.querySelector(sliderSelector + "> .panel-slider-controls .left");
+initializeMainSlider = sliderSelector => {
+  const rightSliderButton = document.querySelector(
+    sliderSelector + "> .panel-slider-controls .right"
+  );
+  const leftSliderButton = document.querySelector(
+    sliderSelector + "> .panel-slider-controls .left"
+  );
 
-  let timerId = setInterval(selectMainSlideRight, 1000);
-
+  let timerId = setInterval(selectMainSlideRight, 3000);
+  let scheduleTimerId;
   rightSliderButton.addEventListener("click", () => {
-  clearInterval(timerId);
-  selectMainSlideRight();
+    clearInterval(timerId);
+    selectMainSlideRight();
+    clearTimeout(scheduleTimerId);
 
-  setTimeout(() => {
-    timerId = setInterval(selectMainSlideRight, 1000);
-  }, 5000);
+    scheduleTimerId = setTimeout(() => {
+      timerId = setInterval(selectMainSlideRight, 3000);
+    }, 5000);
+    
   });
 
   leftSliderButton.addEventListener("click", () => {
+    clearInterval(timerId);
+    selectMainSlideLeft();
 
-  clearInterval(timerId);
-  selectMainSlideLeft();
-
-  setTimeout(() => {
-    timerId = setInterval(selectMainSlideRight, 1000);
-  }, 5000);
+    clearTimeout(scheduleTimerId);
+    
+    scheduleTimerId = setTimeout(() => {
+      timerId = setInterval(selectMainSlideRight, 3000);
+    }, 5000);
   });
 
   function selectMainSlideRight() {
@@ -66,6 +78,11 @@ initializeMainSlider = (sliderSelector) => {
       ".slider .slider-model ul .active"
     );
     const previosIndex = [].indexOf.call(sliderLi, sliderLiActive);
+
+    if (!sliderLiActive) {
+      return;
+    }
+
     sliderLiActive.classList.remove("active");
 
     if (previosIndex == sliderLi.length - 2) {
@@ -84,7 +101,7 @@ initializeMainSlider = (sliderSelector) => {
 
       sliderLi[previosIndex + 1].classList.add("active");
     }
-  };
+  }
 
   selectMainSlideLeft = () => {
     const sliderUl = document.querySelector(".slider .slider-model ul");
@@ -94,6 +111,10 @@ initializeMainSlider = (sliderSelector) => {
     );
     const previosIndex = [].indexOf.call(sliderLi, sliderLiActive);
     sliderLiActive.classList.remove("active");
+
+    if (!sliderLiActive) {
+      return;
+    }
 
     if (previosIndex == 0) {
       sliderUl.style.transition = "none";
@@ -117,7 +138,7 @@ initializeSlider = sliderSelector => {
     sliderSelector + " > .slider-controls"
   );
 
-  let timerId = setInterval(autoRun, 1000);
+  let timerId = setInterval(autoRun, 3000);
 
   sliderControl.addEventListener("click", e => {
     if (!e.target.classList.contains("pointer")) return;
