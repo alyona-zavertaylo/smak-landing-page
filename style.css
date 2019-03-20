@@ -107,6 +107,8 @@ header {
       padding: 0;
       width: 500%;
       height: 100%;
+      transition: 0.3s;
+      left: 0;
       position: relative; }
       .slider .slider-model ul li {
         float: left;
@@ -478,12 +480,58 @@ header {
 
 .clients {
   padding-top: 45px;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .clients .line {
     width: 170px;
     height: 3px;
     background: #ffe600;
     display: inline-block; }
+  .clients .logo-set {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px; }
+    .clients .logo-set ul {
+      margin: 0;
+      padding: 65px 0;
+      width: 183.334%;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      left: 0; }
+      .clients .logo-set ul:before, .clients .logo-set ul:after {
+        content: "";
+        display: table; }
+      .clients .logo-set ul:after {
+        clear: both; }
+      .clients .logo-set ul li {
+        float: left;
+        list-style-type: none;
+        width: 9.0901%;
+        transition: 0.3s; }
+    .clients .logo-set .slider-control {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0; }
+      .clients .logo-set .slider-control .left {
+        background: #ffe600;
+        border: 0;
+        width: 31px;
+        height: 31px;
+        margin-right: 15px;
+        color: #fff;
+        cursor: pointer;
+        outline: none; }
+      .clients .logo-set .slider-control .right {
+        outline: none;
+        background: #ffe600;
+        border: 0;
+        width: 31px;
+        height: 31px;
+        margin-left: 15px;
+        color: #fff;
+        cursor: pointer; }
   .clients .quote {
     background: #12191c;
     color: #fff; }
@@ -500,7 +548,9 @@ header {
         width: 500%;
         padding: 0;
         margin: 0;
-        position: relative; }
+        position: relative;
+        left: 0;
+        transition: 0.3s; }
         .clients .quote .slider-model ul li {
           width: 20%;
           height: 100%;

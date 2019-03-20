@@ -33,11 +33,148 @@ window.onload = function() {
   // slider - blok "Quote"
   initializeSlider(".quote .slider-model");
 
-  // filter 
+  // filter
 
   // slider - block "Client"
+  initializeClientSlider(".clients");
 
+  // let clientsButtonRight = document.querySelector(
+  //   ".clients .logo-set .slider-control .right"
+  // );
+  // clientsButtonRight.addEventListener("click", () => {
+  //   debugger;
+    // const sliderUl = document.querySelector(".clients .logo-set ul");
+    // const sliderLi = document.querySelectorAll(".clients .logo-set ul li");
+    // const sliderLiActive = document.querySelector(
+    //   ".clients .logo-set ul .active"
+    // );
+    // const previosIndex = [].indexOf.call(sliderLi, sliderLiActive);
+
+    // if (!sliderLiActive) {
+    //   return;
+    // }
+    // sliderLiActive.classList.remove("active");
+    // sliderUl.style.transition = "0.3s";
+    // if (previosIndex >= 5 && previosIndex < 10) {
+    //   sliderUl.style.left = (previosIndex - 4) * -16.35 + "%";
+    //   sliderLi[previosIndex + 1].classList.add("active");
+    // } else if (previosIndex == 10) {
+    //   sliderUl.style.left = (previosIndex - 4) * -16.35 + "%";
+    //   sliderLi[previosIndex - 5].classList.add("active");
+    //   setTimeout(() => {
+    //     sliderUl.style.transition = "none";
+    //     sliderUl.style.left = 0 + "%";
+    //     // sliderLi[0].classList.add("active");
+    //     setTimeout(() => {
+    //       sliderUl.style.transition = "0.3s";
+    //     }, 5);
+    //   }, 0);
+    // }
+
+    // if (previosIndex == sliderLi.length - 2) {
+    //   sliderUl.style.left = (previosIndex + 1) * -9.09 + "%";
+    //   setTimeout(() => {
+    //     sliderUl.style.transition = "none";
+    //     sliderUl.style.left = 0 + "%";
+    //     // sliderLi[0].classList.add("active");
+    //     setTimeout(() => {
+    //       sliderUl.style.transition = "0.3s";
+    //     }, 50);
+    //   }, 400);
+    // } else {
+    //   sliderUl.style.transition = "0.3s";
+    //   sliderUl.style.left = (previosIndex + 1) * -9.09 + "%";
+
+    // sliderLi[previosIndex + 1].classList.add("active");
+    // }
+  // });
 };
+
+function initializeClientSlider(sliderSelector) {
+  const clientsButtonRight = document.querySelector(
+    sliderSelector + " .logo-set .slider-control .right"
+  );
+  const clientsButtonLeft = document.querySelector(
+    sliderSelector + " .logo-set .slider-control .left"
+  );
+
+  let timerId = setInterval(selectMainSlideRight, 3000);
+  let scheduleTimerId;
+  clientsButtonRight.addEventListener("click", () => {
+    clearInterval(timerId);
+    selectMainSlideRight();
+    clearTimeout(scheduleTimerId);
+
+    scheduleTimerId = setTimeout(() => {
+      timerId = setInterval(selectMainSlideRight, 3000);
+    }, 2000);
+
+  });
+  clientsButtonLeft.addEventListener("click", () => {
+    clearInterval(timerId);
+    selectMainSlideLeft();
+    clearTimeout(scheduleTimerId);
+
+    scheduleTimerId = setTimeout(() => {
+      timerId = setInterval(selectMainSlideRight, 3000);
+    }, 2000);
+  })
+
+  function selectMainSlideRight() {
+    const sliderUl = document.querySelector(".clients .logo-set ul");
+    const sliderLi = document.querySelectorAll(".clients .logo-set ul li");
+    const sliderLiActive = document.querySelector(
+      ".clients .logo-set ul .active"
+    );
+    const previosIndex = [].indexOf.call(sliderLi, sliderLiActive);
+
+    if (!sliderLiActive) {
+      return;
+    }
+    sliderLiActive.classList.remove("active");
+    sliderUl.style.transition = "0.3s";
+    sliderUl.style.left = (previosIndex - 4) * -16.35 + "%";
+    if (previosIndex == 9) {
+      setTimeout(() => {
+        sliderLi[previosIndex - 4].classList.add("active");
+        sliderUl.style.transition = "none";
+        sliderUl.style.left = 0 + "%";
+        setTimeout(() => {
+          sliderUl.style.transition = "0.3s";
+        }, 50);
+      }, 300);
+    } else {
+      sliderLi[previosIndex + 1].classList.add("active");
+    }
+
+  }
+  function selectMainSlideLeft() {
+    const sliderUl = document.querySelector(".clients .logo-set ul");
+    const sliderLi = document.querySelectorAll(".clients .logo-set ul li");
+    const sliderLiActive = document.querySelector(
+      ".clients .logo-set ul .active"
+    );
+    const previosIndex = [].indexOf.call(sliderLi, sliderLiActive);
+
+    if (!sliderLiActive) {
+      return;
+    }
+    sliderLiActive.classList.remove("active");
+
+    if(previosIndex == 5) {
+      sliderUl.style.transition = "0s";
+      sliderUl.style.left = (sliderLi.length - 1 - previosIndex) * -16.35 + "%";
+      setTimeout(() => {
+        sliderUl.style.transition = "0.3s";
+        sliderUl.style.left = (sliderLi.length - 2 - previosIndex) * -16.35 + "%";
+        sliderLi[sliderLi.length - 2].classList.add("active");
+      }, 40)
+    } else {
+      sliderUl.style.left = (previosIndex - 6) * -16.35 + "%";
+      sliderLi[previosIndex - 1].classList.add("active");
+    }
+  }
+}
 
 initializeMainSlider = sliderSelector => {
   const rightSliderButton = document.querySelector(
@@ -57,7 +194,6 @@ initializeMainSlider = sliderSelector => {
     scheduleTimerId = setTimeout(() => {
       timerId = setInterval(selectMainSlideRight, 3000);
     }, 5000);
-    
   });
 
   leftSliderButton.addEventListener("click", () => {
@@ -65,7 +201,7 @@ initializeMainSlider = sliderSelector => {
     selectMainSlideLeft();
 
     clearTimeout(scheduleTimerId);
-    
+
     scheduleTimerId = setTimeout(() => {
       timerId = setInterval(selectMainSlideRight, 3000);
     }, 5000);
@@ -103,7 +239,7 @@ initializeMainSlider = sliderSelector => {
     }
   }
 
-  selectMainSlideLeft = () => {
+  function selectMainSlideLeft() {
     const sliderUl = document.querySelector(".slider .slider-model ul");
     const sliderLi = document.querySelectorAll(".slider .slider-model ul li");
     const sliderLiActive = document.querySelector(

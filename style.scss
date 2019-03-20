@@ -85,8 +85,6 @@ body {
   }
 }
 
-
-
 // Header
 header {
   @include clearfix();
@@ -155,7 +153,8 @@ header {
       padding: 0;
       width: 500%;
       height: 100%;
-      // float: left;
+      transition: 0.3s;
+      left: 0;
       position: relative;
       li {
         float: left;
@@ -167,7 +166,7 @@ header {
         // background-image: url("img/slider1.jpg");
         // background-size: cover;
         // background-repeat: no-repeat;
-        .panel-slider{
+        .panel-slider {
           position: absolute;
           top: 50%;
           left: 0;
@@ -257,8 +256,6 @@ header {
           }
         }
       }
-      
-     
     }
   }
 }
@@ -605,12 +602,62 @@ header {
 .clients {
   padding-top: 45px;
   text-align: center;
+  position: relative;
   .line {
     width: 170px;
     height: 3px;
     background: #ffe600;
     display: inline-block;
   }
+  .logo-set {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+    ul {
+      margin: 0;
+      padding: 65px 0;
+      width: 183.334%;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      left: 0;
+      @include clearfix();
+      li {
+        float: left;
+        list-style-type: none;
+        width: 9.0901%;
+        transition: 0.3s;
+      }
+    }
+    .slider-control {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0;
+
+      .left {
+        background: #ffe600;
+        border: 0;
+        width: 31px;
+        height: 31px;
+        margin-right: 15px;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+      }
+      .right {
+        outline: none;
+        background: #ffe600;
+        border: 0;
+        width: 31px;
+        height: 31px;
+        margin-left: 15px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
   .quote {
     background: hsl(198, 21%, 9%);
     color: #fff;
@@ -628,6 +675,8 @@ header {
         padding: 0;
         margin: 0;
         position: relative;
+        left: 0;
+        transition: 0.3s;
         li {
           width: 20%;
           height: 100%;
