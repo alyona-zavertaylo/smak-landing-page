@@ -341,14 +341,14 @@ header {
       @include breakpoint(sm) {
         padding: 40px 0 60px 0;
       }
-      
+
       ul {
         margin: 0;
         padding: 0;
         display: inline-block;
         li {
           cursor: pointer;
-          
+
           padding: 0 5px;
           margin: 0 12px;
           list-style-type: square;
@@ -370,16 +370,14 @@ header {
             color: #ffe600;
           }
           .active {
-          color: #ffe600;
-        }
+            color: #ffe600;
+          }
         }
         li:first-child {
           @include breakpoint(sm) {
             list-style-type: none;
           }
-          
         }
-        
       }
     }
 
@@ -603,6 +601,66 @@ header {
       p {
         margin: 5px 0;
         color: #797979;
+      }
+    }
+  }
+  .team-expand {
+    background: #131316;
+    color: #fff;
+    position: relative;
+    text-align: left;
+    // padding: 35px 0 40px 0;
+    .triangle {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 26.5px 18px 26.5px;
+      border-color: transparent transparent #131316 transparent;
+      transform: translate(0%, -95%);
+    }
+    .exit {
+        position: absolute;
+        top: 60px;
+        right: 200px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        outline: none;
+      }
+    .title {
+      padding: 35px 0 40px 0;
+      button {
+        background: transparent;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #fff;
+
+        i {
+          font-size: 16px;
+        }
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        color: #ffe600;
+      }
+      
+      .facebook {
+        margin-right: 20px;
+      }
+      .facebook:hover {
+        background: #ffe600;
+      }
+      .twitter:hover {
+        background: #ffe600;
       }
     }
   }

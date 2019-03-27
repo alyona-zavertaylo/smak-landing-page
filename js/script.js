@@ -8,10 +8,6 @@ window.onload = function() {
     $.scrollIt();
   });
 
-  // Slider
-
-  // const buttonLeft = document.querySelector('slider-controls .left');
-
   /*
     ========================================
    Progress bar - easyPieChart
@@ -28,6 +24,7 @@ window.onload = function() {
       animate: 2000
     });
   });
+
   // slider - blok "Header"
   initializeMainSlider(".slider");
   // slider - blok "Quote"
@@ -59,14 +56,42 @@ window.onload = function() {
     }
   }
   function addActiveClassWorks(target) {
-    const workPanelUlLiA = document.querySelectorAll('.navigation-work-panel > ul li a');
-    for(let i = 0; i < workPanelUlLiA.length; i++) {
-        workPanelUlLiA[i].classList.remove('active');
-      
-     
+    const workPanelUlLiA = document.querySelectorAll(
+      ".navigation-work-panel > ul li a"
+    );
+    for (let i = 0; i < workPanelUlLiA.length; i++) {
+      workPanelUlLiA[i].classList.remove("active");
     }
-    target.classList.add('active');
-  };
+    target.classList.add("active");
+  }
+
+  // block - Team
+  const team = document.querySelector(".about .team");
+  const teamCoWorkers = Array.from(
+    document.querySelectorAll(".about .team .co-worker")
+  );
+  const teamExpandTitle = Array.from(
+    document.querySelectorAll(".about .team-expand .title")
+  );
+  const teamExpand = document.querySelector(".about .team-expand");
+  const exitExpandTeam = document.querySelector(".about .team-expand .exit");
+
+  exitExpandTeam.addEventListener("click", () => {
+    teamExpand.style.display = "none";
+  });
+  team.addEventListener("click", e => {
+    debugger;
+    let coWorker = e.target.closest(".co-worker");
+    let i = teamCoWorkers.indexOf(coWorker);
+    for (let j = 0; j < teamExpandTitle.length; j++) {
+      teamExpand.style.display = "block";
+      if (i != j) {
+        teamExpandTitle[j].style.display = "none";
+      } else {
+        teamExpandTitle[i].style.display = "block";
+      }
+    }
+  });
 };
 
 function initializeClientSlider(sliderSelector) {

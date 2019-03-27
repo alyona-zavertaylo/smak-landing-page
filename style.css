@@ -483,6 +483,53 @@ header {
       .about .team .title p {
         margin: 5px 0;
         color: #797979; }
+  .about .team-expand {
+    background: #131316;
+    color: #fff;
+    position: relative;
+    text-align: left; }
+    .about .team-expand .triangle {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 26.5px 18px 26.5px;
+      border-color: transparent transparent #131316 transparent;
+      transform: translate(0%, -95%); }
+    .about .team-expand .exit {
+      position: absolute;
+      top: 60px;
+      right: 200px;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      outline: none; }
+    .about .team-expand .title {
+      padding: 35px 0 40px 0; }
+      .about .team-expand .title button {
+        background: transparent;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #fff; }
+        .about .team-expand .title button i {
+          font-size: 16px; }
+      .about .team-expand .title h4 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        color: #ffe600; }
+      .about .team-expand .title .facebook {
+        margin-right: 20px; }
+      .about .team-expand .title .facebook:hover {
+        background: #ffe600; }
+      .about .team-expand .title .twitter:hover {
+        background: #ffe600; }
 
 .skills {
   background: #131a1d;
