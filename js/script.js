@@ -74,6 +74,7 @@ window.onload = function() {
     document.querySelectorAll(".about .team-expand .title")
   );
   const teamExpand = document.querySelector(".about .team-expand");
+  const teamExpandTriangle = document.querySelector(".about .team-expand .triangle");
   const exitExpandTeam = document.querySelector(".about .team-expand .exit");
 
   exitExpandTeam.addEventListener("click", () => {
@@ -89,6 +90,7 @@ window.onload = function() {
         teamExpandTitle[j].style.display = "none";
       } else {
         teamExpandTitle[i].style.display = "block";
+        teamExpandTriangle.style.left = 10 + i * 25 + '%';
       }
     }
   });
