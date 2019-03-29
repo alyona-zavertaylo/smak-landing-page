@@ -69,7 +69,11 @@ header {
       header .head-fix nav:after {
         clear: both; }
       header .head-fix nav ul {
-        float: right; }
+        float: right;
+        display: none; }
+        @media (min-width: 768px) {
+          header .head-fix nav ul {
+            display: block; } }
         header .head-fix nav ul li {
           cursor: pointer;
           float: left;
@@ -80,7 +84,15 @@ header {
           text-transform: uppercase;
           font-size: 14px;
           font-weight: 700;
-          font-family: "Oswald", sans-serif; }
+          font-family: "Oswald", sans-serif;
+          display: none; }
+          @media (min-width: 768px) {
+            header .head-fix nav ul li {
+              display: list-item;
+              padding: 0 5px; } }
+          @media (min-width: 992px) {
+            header .head-fix nav ul li {
+              padding: 0 10px; } }
           header .head-fix nav ul li a {
             color: #fff; }
           header .head-fix nav ul li a:hover {
@@ -89,6 +101,15 @@ header {
             color: #ffe600; }
         header .head-fix nav ul li:first-child {
           list-style-type: none; }
+      header .head-fix nav .min-menu {
+        float: right;
+        display: block; }
+        @media (min-width: 768px) {
+          header .head-fix nav .min-menu {
+            display: none; } }
+        header .head-fix nav .min-menu i {
+          color: #fff;
+          font-size: 35px; }
 
 .slider {
   height: 100vh;
@@ -438,25 +459,36 @@ header {
     text-align: left; }
     .about .service .service-part {
       margin-top: 45px; }
-      .about .service .service-part .circle {
-        background: #ffe600;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        margin-top: 16px;
-        position: relative; }
-        .about .service .service-part .circle img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%); }
-        .about .service .service-part .circle img:hover {
-          top: 27.5%;
-          left: 27.5%;
-          -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-          transform: scale(1.1);
-          transition: 0.3s; }
+      .about .service .service-part .circle-wrapper {
+        text-align: center; }
+        .about .service .service-part .circle-wrapper .circle {
+          background: #ffe600;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-top: 16px;
+          position: relative;
+          display: inline-block; }
+          @media (min-width: 576px) {
+            .about .service .service-part .circle-wrapper .circle {
+              width: 70px;
+              height: 70px; } }
+          @media (min-width: 768px) {
+            .about .service .service-part .circle-wrapper .circle {
+              width: 60px;
+              height: 60px; } }
+          .about .service .service-part .circle-wrapper .circle img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+          .about .service .service-part .circle-wrapper .circle img:hover {
+            top: 27.5%;
+            left: 27.5%;
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            transition: 0.3s; }
       .about .service .service-part p {
         margin: 0; }
   .about .team {
@@ -583,7 +615,7 @@ header {
     .clients .logo-set ul {
       margin: 0;
       padding: 65px 0;
-      width: 183.334%;
+      width: 542.342%;
       position: relative;
       transition: all 0.3s ease 0s;
       left: 0; }
@@ -592,11 +624,26 @@ header {
         display: table; }
       .clients .logo-set ul:after {
         clear: both; }
+      @media (min-width: 576px) {
+        .clients .logo-set ul {
+          width: 359.008%; } }
+      @media (min-width: 768px) {
+        .clients .logo-set ul {
+          width: 267.341%; } }
+      @media (min-width: 992px) {
+        .clients .logo-set ul {
+          width: 183.334%; } }
       .clients .logo-set ul li {
         float: left;
         list-style-type: none;
         width: 9.0901%;
         transition: 0.3s; }
+        @media (min-width: 768px) {
+          .clients .logo-set ul li {
+            width: 7.41755%; } }
+        @media (min-width: 992px) {
+          .clients .logo-set ul li {
+            width: 9.0901%; } }
     .clients .logo-set .slider-control {
       position: absolute;
       left: 50%;

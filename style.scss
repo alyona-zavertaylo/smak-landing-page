@@ -111,6 +111,10 @@ header {
       transform: translate(0, -50%);
       ul {
         float: right;
+        display: none;
+        @include breakpoint(md) {
+          display: block;
+        }
         li {
           cursor: pointer;
           float: left;
@@ -122,6 +126,14 @@ header {
           font-size: 14px;
           font-weight: 700;
           font-family: "Oswald", sans-serif;
+          display: none;
+          @include breakpoint(md) {
+            display: list-item;
+            padding: 0 5px;
+          }
+          @include breakpoint(lg) {
+            padding: 0 10px;
+          }
           a {
             color: #fff;
           }
@@ -134,6 +146,17 @@ header {
         }
         li:first-child {
           list-style-type: none;
+        }
+      }
+      .min-menu {
+        float: right;
+        display: block;
+        @include breakpoint(md) {
+          display: none;
+        }
+        i {
+          color: #fff;
+          font-size: 35px;
         }
       }
     }
@@ -547,14 +570,25 @@ header {
 
     .service-part {
       margin-top: 45px;
-
-      .circle {
+      // text-align: center;
+      .circle-wrapper {
+        text-align: center;
+        .circle {
         background: #ffe600;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         margin-top: 16px;
         position: relative;
+        display: inline-block;
+        @include breakpoint(sm) {
+          width: 70px;
+          height: 70px;
+        }
+        @include breakpoint(md) {
+          width: 60px;
+          height: 60px;
+        }
         img {
           position: absolute;
           top: 50%;
@@ -570,9 +604,12 @@ header {
           transition: 0.3s;
         }
       }
+     }
       p {
         margin: 0;
       }
+      
+      
     }
   }
   .team {
@@ -725,16 +762,31 @@ header {
     ul {
       margin: 0;
       padding: 65px 0;
-      width: 183.334%;
+      width: 542.342%;
       position: relative;
       transition: all 0.3s ease 0s;
       left: 0;
       @include clearfix();
+      @include breakpoint(sm) {
+        width: 359.008%;
+      }
+      @include breakpoint(md) {
+        width: 267.341%;
+      }
+      @include breakpoint(lg) {
+        width: 183.334%;
+      }
       li {
         float: left;
         list-style-type: none;
-        width: 9.0901%;
+        width:9.0901%;
         transition: 0.3s;
+        @include breakpoint(md) {
+          width: 7.41755%;
+        }
+        @include breakpoint(lg) {
+          width: 9.0901%;
+        }
       }
     }
     .slider-control {
