@@ -25,6 +25,37 @@ window.onload = function() {
     });
   });
 
+  // min menu open/close
+  // const minButton = document.querySelector('header nav .min-menu');
+  document.querySelector('header nav .min-menu').addEventListener("click", () => {
+    // const minPanel = document.querySelector('.min-panel');
+    
+    document.querySelector('.min-panel').style.display = "block";
+    document.querySelector('body').style.overflow = "hidden";
+    document.querySelector('header nav .min-menu').style.display = "none";
+    document.querySelector('header nav .min-menu-exit').style.display = "block";
+  });
+
+  document.querySelector('header nav .min-menu-exit').addEventListener("click", () => {
+    closeMinMenu();
+  });
+
+  const minPanelUlLi = document.querySelectorAll('.min-panel nav ul li');
+
+  for(let i = 0; i < minPanelUlLi.length; i++) {
+    
+    minPanelUlLi[i].addEventListener("click",  () => {
+      closeMinMenu();
+    });
+  }
+  
+  function closeMinMenu() {
+    document.querySelector('.min-panel').style.display = "none";
+    document.querySelector('body').style.overflow = "auto";
+    document.querySelector('header nav .min-menu').style.display = "block";
+    document.querySelector('header nav .min-menu-exit').style.display = "none";
+  }
+
   // slider - blok "Header"
   initializeMainSlider(".slider");
   // slider - blok "Quote"

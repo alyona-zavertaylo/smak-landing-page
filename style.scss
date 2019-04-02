@@ -31,6 +31,7 @@
 body {
   padding: 0;
   margin: 0 auto;
+  position: relative;
   .wrapper {
     max-width: 1170px;
     margin: 0 auto;
@@ -159,10 +160,54 @@ header {
           font-size: 35px;
         }
       }
+      .min-menu-exit {
+        float: right;
+        display: none;
+        // @include breakpoint(md) {
+        //   display: none;
+        // }
+        i {
+          color: #fff;
+          font-size: 37px;
+        }
+      }
     }
   }
+  
 }
-
+.min-panel {
+    height: 100vh;
+    background: #b8b8b9;
+    // background-image: url("img/bg-min-panel.jpg");
+    // background-size: cover;
+    // background-position: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+  nav {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-60%, 0);
+    text-align: center;
+    ul{
+      list-style-type: none;
+      text-transform: uppercase;
+      
+      li {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+        color: #fff;
+      }
+      li:hover {
+        color: #ffe600;
+      }
+    }
+  }
+  }
 .slider {
   @include clearfix();
   height: 100vh;

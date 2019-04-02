@@ -1,6 +1,7 @@
 body {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
   body .wrapper {
     max-width: 1170px;
     margin: 0 auto;
@@ -110,6 +111,37 @@ header {
         header .head-fix nav .min-menu i {
           color: #fff;
           font-size: 35px; }
+      header .head-fix nav .min-menu-exit {
+        float: right;
+        display: none; }
+        header .head-fix nav .min-menu-exit i {
+          color: #fff;
+          font-size: 37px; }
+
+.min-panel {
+  height: 100vh;
+  background: #b8b8b9;
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 20; }
+  .min-panel nav {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-60%, 0);
+    text-align: center; }
+    .min-panel nav ul {
+      list-style-type: none;
+      text-transform: uppercase; }
+      .min-panel nav ul li {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+        color: #fff; }
+      .min-panel nav ul li:hover {
+        color: #ffe600; }
 
 .slider {
   height: 100vh;
